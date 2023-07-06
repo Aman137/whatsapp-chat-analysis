@@ -95,13 +95,13 @@ if uploaded_file is not None:
                 st.pyplot(fig)
             with col2:
                 st.dataframe(new_df)
-       # WordCloud
-          st.title("Wordcloud")
-          df_wc = helper.create_wordcloud(selected_user,df)
-          fig,ax = plt.subplots()
-          ax.imshow(df_wc)
-          st.pyplot(fig)
-       
+
+        # WordCloud
+        st.title("Wordcloud")
+        df_wc = helper.create_wordcloud(selected_user,df)
+        fig,ax = plt.subplots()
+        ax.imshow(df_wc)
+        st.pyplot(fig)
 
         # most common words
         most_common_df = helper.most_common_words(selected_user,df)
@@ -126,13 +126,6 @@ if uploaded_file is not None:
             fig,ax = plt.subplots()
             ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
             st.pyplot(fig)
-            
-
-
-
-
-
-
 
 
 
